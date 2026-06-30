@@ -260,7 +260,7 @@ const post = computed(() => blogData.value[slug.value])
 
 <style scoped lang="scss">
 .blog-detail {
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 40px 24px;
 }
