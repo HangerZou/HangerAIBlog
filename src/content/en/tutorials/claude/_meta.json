@@ -1,0 +1,11 @@
+{
+  "key": "claude",
+  "title": "Claude Code: From Zero to Hero",
+  "description": "Complete tutorial series for learning AI-assisted programming with Claude Code",
+  "icon": "terminal",
+  "category": "ai-tools",
+  "order": 1,
+  "isInternal": false,
+  "passwordHash": null,
+  "tags": ["claude", "ai", "programming"]
+}

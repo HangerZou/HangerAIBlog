@@ -1,0 +1,11 @@
+{
+  "key": "claude",
+  "title": "Claude Code 从入门到精通",
+  "description": "学习使用 Claude Code 进行 AI 辅助编程的完整教程系列",
+  "icon": "terminal",
+  "category": "ai-tools",
+  "order": 1,
+  "isInternal": false,
+  "passwordHash": null,
+  "tags": ["claude", "ai", "编程"]
+}

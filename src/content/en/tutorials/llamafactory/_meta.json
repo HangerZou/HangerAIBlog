@@ -1,0 +1,11 @@
+{
+  "key": "llamafactory",
+  "title": "LlamaFactory Fine-tuning Workshop",
+  "description": "Internal training tutorial for LLM fine-tuning with LlamaFactory",
+  "icon": "cpu",
+  "category": "ml-training",
+  "order": 2,
+  "isInternal": true,
+  "passwordHash": "sha256:bd201e1917668e369fce374cca685f619db79b354939325a138d8f990585ed7c",
+  "tags": ["llama", "fine-tuning", "internal"]
+}

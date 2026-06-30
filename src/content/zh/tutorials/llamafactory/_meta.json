@@ -1,0 +1,11 @@
+{
+  "key": "llamafactory",
+  "title": "LlamaFactory 微调实战",
+  "description": "使用 LlamaFactory 进行大模型微调的内部培训教程",
+  "icon": "cpu",
+  "category": "ml-training",
+  "order": 2,
+  "isInternal": true,
+  "passwordHash": "sha256:bd201e1917668e369fce374cca685f619db79b354939325a138d8f990585ed7c",
+  "tags": ["llama", "微调", "内部"]
+}
