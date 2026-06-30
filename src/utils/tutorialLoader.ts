@@ -37,7 +37,7 @@ function parseFrontmatter(raw: string): { attrs: TutorialFrontmatter; body: stri
     attrs[key] = val
   }
 
-  return { attrs: attrs as TutorialFrontmatter, body: match[2] }
+  return { attrs: attrs as unknown as TutorialFrontmatter, body: match[2] }
 }
 
 export async function loadTutorialSeries(locale: string): Promise<TutorialSeries[]> {
