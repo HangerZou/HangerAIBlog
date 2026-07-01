@@ -5,57 +5,50 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="noindex" />
   <title>博客管理后台</title>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      background: #FFF8F0;
+      color: #3D2C1E;
+    }
+    .container {
+      text-align: center;
+      padding: 40px;
+    }
+    h1 {
+      font-size: 24px;
+      margin-bottom: 16px;
+    }
+    p {
+      color: #8B7355;
+      margin-bottom: 24px;
+    }
+    a {
+      display: inline-block;
+      padding: 12px 24px;
+      background: linear-gradient(135deg, #E8722A, #F5A623);
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 500;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    a:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(232, 114, 42, 0.3);
+    }
+  </style>
 </head>
 <body>
-  <div id="nc-root"></div>
-  <script src="https://unpkg.com/@sveltia/cms/dist/sveltia-cms.js"></script>
-  <script>
-    // 使用 GitHub Token 方式登录
-    // 用户首次登录时需要输入 GitHub Personal Access Token
-    CMS.init({
-      config: {
-        backend: {
-          name: 'github',
-          repo: 'HangerZou/HangerAIBlog',
-          branch: 'main',
-          auth_type: 'token',
-          api_root: 'https://api.github.com'
-        },
-        media_folder: 'public/uploads',
-        public_folder: '/uploads',
-        collections: [
-          {
-            name: 'zh-blog',
-            label: '博客文章',
-            folder: 'src/content/zh/blog',
-            create: true,
-            slug: '{{year}}-{{month}}-{{day}}-{{slug}}',
-            fields: [
-              { label: '标题', name: 'title', widget: 'string' },
-              { label: '描述', name: 'description', widget: 'text' },
-              { label: '日期', name: 'date', widget: 'datetime', date_format: 'YYYY-MM-DD', time_format: false },
-              { label: '标签', name: 'tags', widget: 'list', allow_add: true },
-              { label: '正文', name: 'body', widget: 'markdown' }
-            ]
-          },
-          {
-            name: 'zh-tutorial',
-            label: '教程',
-            folder: 'src/content/zh/tutorials',
-            create: true,
-            slug: '{{slug}}',
-            nested: { depth: 3 },
-            fields: [
-              { label: '标题', name: 'title', widget: 'string' },
-              { label: '描述', name: 'description', widget: 'text' },
-              { label: '日期', name: 'date', widget: 'datetime', date_format: 'YYYY-MM-DD', time_format: false },
-              { label: '标签', name: 'tags', widget: 'list', allow_add: true },
-              { label: '正文', name: 'body', widget: 'markdown' }
-            ]
-          }
-        ]
-      }
-    });
-  </script>
+  <div class="container">
+    <h1>📝 博客管理后台</h1>
+    <p>使用 TinaCMS 管理你的博客内容</p>
+    <a href="/admin/index.html">进入管理后台</a>
+  </div>
 </body>
 </html>
