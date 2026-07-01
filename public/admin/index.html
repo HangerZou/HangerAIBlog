@@ -7,17 +7,19 @@
   <title>博客管理后台</title>
 </head>
 <body>
-  <!-- Sveltia CMS - Decap CMS 的现代替代品 -->
+  <div id="nc-root"></div>
   <script src="https://unpkg.com/@sveltia/cms/dist/sveltia-cms.js"></script>
   <script>
+    // 使用 GitHub Token 方式登录
+    // 用户首次登录时需要输入 GitHub Personal Access Token
     CMS.init({
       config: {
         backend: {
           name: 'github',
           repo: 'HangerZou/HangerAIBlog',
           branch: 'main',
-          auth_type: 'implicit',
-          base_url: 'https://api.netlify.com'
+          auth_type: 'token',
+          api_root: 'https://api.github.com'
         },
         media_folder: 'public/uploads',
         public_folder: '/uploads',
