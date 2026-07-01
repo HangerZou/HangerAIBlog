@@ -2,6 +2,5 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "framework": "vite",
-  "buildCommand": "tinacms build && npm run build",
   "outputDirectory": "dist"
 }
