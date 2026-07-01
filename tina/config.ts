@@ -6,7 +6,7 @@ export default defineConfig({
   branch: "main",
 
   build: {
-    outputFolder: "admin",
+    outputFolder: "dist",
     publicFolder: "public",
   },
   media: {
