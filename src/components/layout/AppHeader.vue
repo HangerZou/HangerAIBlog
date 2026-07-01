@@ -8,6 +8,7 @@ import logoImg from '@/assets/img/avatar.png'
 import { useI18n } from 'vue-i18n'
 import { useRoute } from 'vue-router'
 import LanguageSwitcher from '@/components/common/LanguageSwitcher.vue'
+import SearchModal from '@/components/common/SearchModal.vue'
 
 const { t } = useI18n()
 const route = useRoute()
@@ -83,6 +84,7 @@ onUnmounted(() => {
 
       <!-- Right Section -->
       <div class="app-header__actions">
+        <SearchModal />
         <a
           href="https://github.com/hangerzou"
           class="app-header__github"
