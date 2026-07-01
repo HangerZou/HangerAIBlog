@@ -1,0 +1,74 @@
+backend:
+  name: github
+  repo: HangerZou/HangerAIBlog
+  branch: main
+  base_url: https://decap-oauth.netlify.app
+  auth_type: pkce
+
+publish_mode: editorial_workflow
+
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+collections:
+  # 中文博客
+  - name: "zh-blog"
+    label: "博客文章（中文）"
+    folder: "src/content/zh/blog"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    path: "{{slug}}"
+    fields:
+      - { label: "标题", name: "title", widget: "string" }
+      - { label: "描述", name: "description", widget: "text" }
+      - { label: "发布日期", name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false }
+      - { label: "标签", name: "tags", widget: "list", allow_add: true }
+      - { label: "正文", name: "body", widget: "markdown" }
+
+  # 英文博客
+  - name: "en-blog"
+    label: "Blog Posts (EN)"
+    folder: "src/content/en/blog"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    path: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Date", name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false }
+      - { label: "Tags", name: "tags", widget: "list", allow_add: true }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  # Claude 教程（中文）
+  - name: "zh-claude-tutorial"
+    label: "Claude 教程（中文）"
+    folder: "src/content/zh/tutorials/claude"
+    create: true
+    slug: "{{slug}}"
+    path: "{{slug}}"
+    fields:
+      - { label: "标题", name: "title", widget: "string" }
+      - { label: "描述", name: "description", widget: "text" }
+      - { label: "发布日期", name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false }
+      - { label: "标签", name: "tags", widget: "list", allow_add: true }
+      - { label: "正文", name: "body", widget: "markdown" }
+    filter:
+      - field: slug
+        pattern: "^(?!_meta$)"
+
+  # LlamaFactory 教程（中文）
+  - name: "zh-llamafactory-tutorial"
+    label: "LlamaFactory 教程（中文）"
+    folder: "src/content/zh/tutorials/llamafactory"
+    create: true
+    slug: "{{slug}}"
+    path: "{{slug}}"
+    fields:
+      - { label: "标题", name: "title", widget: "string" }
+      - { label: "描述", name: "description", widget: "text" }
+      - { label: "发布日期", name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false }
+      - { label: "标签", name: "tags", widget: "list", allow_add: true }
+      - { label: "正文", name: "body", widget: "markdown" }
+    filter:
+      - field: slug
+        pattern: "^(?!_meta$)"
