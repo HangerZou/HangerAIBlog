@@ -1,9 +1,8 @@
 import { defineConfig } from "tinacms";
 
 export default defineConfig({
-  // 暂时使用本地模式，后续可以接入 Tina Cloud
-  clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID || "",
-  token: process.env.TINA_TOKEN || "",
+  clientId: "db6cbc3c-c976-442c-bc4d-a891a91c0a2e",
+  token: "0ba32aca56771237189713ffbf0f1b3e8e5e7bc4",
 
   build: {
     outputFolder: "admin",
